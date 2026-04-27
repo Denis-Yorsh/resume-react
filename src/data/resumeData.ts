@@ -54,7 +54,8 @@ export const resumeData = {
         { name: "MySQL / SQLite / H2 Database", level: 85 },
         { name: "PostgreSQL / MongoDB", level: 85 },
         { name: "Maven / WebPack", level: 80 },
-        { name: "Figma / Postman", level: 85 }
+        { name: "Figma / Postman", level: 85 },
+        { name: "English — B1", level: 100 }
       ]
     }
   ],
