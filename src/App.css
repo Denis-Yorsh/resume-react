@@ -125,13 +125,7 @@
   color: var(--accent);
 }
 
-.summary-text {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-/* Glass Cards */
+/* Glass Cards - RESTORED */
 .glass-card {
   background: var(--glass);
   backdrop-filter: blur(12px);
@@ -170,6 +164,8 @@
 .sidebar-summary {
   white-space: pre-line;
   line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
 }
 
 /* Skills Grid (4 Columns) */
@@ -301,7 +297,7 @@
 /* Signature Grid */
 .signature-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -309,25 +305,37 @@
 .code-sample-card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
+  container-type: inline-size; /* Enable container queries */
 }
 
 .code-container {
   margin-top: 1rem;
-  padding: 1rem;
+  padding: 1.25rem;
   background: rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   font-family: 'Fira Code', 'Courier New', monospace;
-  font-size: 0.85rem;
-  overflow-x: auto;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .code-container pre {
   margin: 0;
+  display: block;
+  width: 100%;
 }
 
 .code-container code {
   color: var(--accent);
-  white-space: pre;
+  white-space: pre-wrap; 
+  word-break: break-word;
+  display: inline-block;
+  text-align: left;
+  font-size: clamp(0.4rem, 2.1cqw, 0.85rem);
+  line-height: 1.5;
 }
 
 @media (max-width: 650px) {

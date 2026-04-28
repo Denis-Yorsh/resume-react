@@ -10,15 +10,15 @@
 
 ### Desctop
 
-![desctop.png](image%2Fdesctop.png)
+![desctop.png](images/desctop.png)
 
 ### Tablet
 
-![tablet.png](image%2Ftablet.png)
+![tablet.png](images/tablet.png)
 
 ### Mobile
 
-![mobile.png](image%2Fmobile.png)
+![mobile.png](images/mobile.png)
 
 ---
 
