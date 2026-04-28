@@ -78,7 +78,7 @@ function App() {
           <section className="glass-card">
             <h3>Contacts</h3>
             <ul className="contact-list">
-              <li><Mail size={16} /> <a href={`mailto:${resumeData.contact.email}`}>Mail</a></li>
+              <li><Mail size={16} /> <a href={`mailto:${resumeData.contact.email}`}>Email</a></li>
               {resumeData.contact.signal && (
                 <li>
                   <SignalIcon size={16} /> <a href={`https://${resumeData.contact.signal}`} target="_blank" rel="noreferrer">Signal</a>
@@ -159,6 +159,21 @@ function App() {
           </section>
         </div>
       </main>
+
+      {/* Developer Signature Section */}
+      <section className="fade-in section-block container">
+        <h2 className="section-title"><Layers size={24} /> Developer Signature</h2>
+        <div className="signature-grid">
+          {resumeData.codeSamples.map((sample, index) => (
+            <div key={index} className="glass-card code-sample-card">
+              <h4>{sample.title}</h4>
+              <div className="code-container">
+                <pre><code>{sample.code}</code></pre>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Projects Section - Full Width Container */}
       <section className="fade-in section-block container projects-section">
