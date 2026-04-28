@@ -1,11 +1,11 @@
 export const resumeData = {
   name: "Denis Yorsh",
   role: "Full Stack Developer",
-  photo: "/src/assets/image_me.jpeg",
+  photo: "/image_me.jpeg",
   contact: {
     email: "denis_my_mail@yahoo.com",
     phone: "",
-    location: "Ukrain",
+    location: "Ukraine",
     linkedin: "linkedin.com/in/denis-yorsh",
     github: "github.com/denis-yorsh",
     signal: "signal.me/#eu/denis_yorsh.99"
@@ -85,6 +85,11 @@ export const resumeData = {
     },
   ],
   projects: [
+    {
+      name: "Full Stack Developer (React) - Resume (Source files)",
+      description: "Developed a web application using React.",
+      link: "https://github.com/Denis-Yorsh/resume-react",
+    },
     {
       name: "Duty Schedule (C++)",
       description: "Developed a C++ application for automating the creation and management of duty schedules in a military unit of the Armed Forces of Ukraine (AFU).",

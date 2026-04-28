@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { resumeData } from './data/resumeData';
 import { useScrollReveal } from './hooks/useScrollReveal';
-import { 
-  Mail, MapPin, Linkedin, Github, 
-  Sun, Moon, Download, Briefcase, GraduationCap, 
+import {
+  Mail, MapPin, Linkedin, Github,
+  Sun, Moon, Download, Briefcase, GraduationCap,
   ExternalLink, Wrench, Smartphone, Server, Layers
 } from 'lucide-react';
 import './App.css';
 
 // Custom Signal Brand Icon
 const SignalIcon = ({ size = 16 }: { size?: number }) => (
-  <svg 
-    width={size} 
-    height={size} 
-    viewBox="0 0 24 24" 
-    fill="currentColor" 
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="currentColor"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.094 22l5.332-1.344c1.4.78 3 1.234 4.71 1.234 5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.636c4.62 0 8.364 3.744 8.364 8.364 0 4.62-3.744 8.364-8.364 8.364-1.442 0-2.8-.364-3.927-1.002l-.28-.158-2.613.658.658-2.528-.18-.314C4.846 15.918 4.545 14.7 4.545 13.364c0-5.32 4.135-8.364 7.455-8.364zM8.344 9.1c-.482 0-.872.39-.872.872v3.49c0 .482.39.872.872.872h6.982c.482 0 .872-.39.872-.872V9.972c0-.482-.39-.872-.872-.872H8.344z"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2.094 22l5.332-1.344c1.4.78 3 1.234 4.71 1.234 5.523 0 10-4.477 10-10S17.523 2 12 2zm0 1.636c4.62 0 8.364 3.744 8.364 8.364 0 4.62-3.744 8.364-8.364 8.364-1.442 0-2.8-.364-3.927-1.002l-.28-.158-2.613.658.658-2.528-.18-.314C4.846 15.918 4.545 14.7 4.545 13.364c0-5.32 4.135-8.364 7.455-8.364zM8.344 9.1c-.482 0-.872.39-.872.872v3.49c0 .482.39.872.872.872h6.982c.482 0 .872-.39.872-.872V9.972c0-.482-.39-.872-.872-.872H8.344z" />
   </svg>
 );
 
@@ -116,8 +116,8 @@ function App() {
                           <span className="skill-lvl-text">{skill.level}%</span>
                         </div>
                         <div className="skill-bar">
-                          <div 
-                            className="skill-progress" 
+                          <div
+                            className="skill-progress"
                             style={{ '--progress': `${skill.level}%` } as React.CSSProperties}
                           ></div>
                         </div>
