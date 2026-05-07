@@ -4,7 +4,7 @@ import { useScrollReveal } from './hooks/useScrollReveal';
 import {
   Mail, MapPin, Linkedin, Github,
   Sun, Moon, Download, Briefcase, GraduationCap,
-  ExternalLink, Wrench, Smartphone, Server, Layers
+  ExternalLink, Wrench, Smartphone, Server, Layers, X
 } from 'lucide-react';
 import './App.css';
 
@@ -23,6 +23,7 @@ const SignalIcon = ({ size = 16 }: { size?: number }) => (
 
 function App() {
   const [theme, setTheme] = useState('dark');
+  const [activeCertificate, setActiveCertificate] = useState<string | null>(null);
   useScrollReveal();
 
   useEffect(() => {
@@ -48,6 +49,22 @@ function App() {
 
   return (
     <div className="app-container">
+      {/* Certificate Modal */}
+      {activeCertificate && (
+        <div className="certificate-modal no-print" onClick={() => setActiveCertificate(null)}>
+          <div className="certificate-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal" onClick={() => setActiveCertificate(null)}>
+              <X size={24} />
+            </button>
+            <img 
+              src={activeCertificate.replace('/public', '')} 
+              alt="Certificate" 
+              className="certificate-img" 
+            />
+          </div>
+        </div>
+      )}
+
       {/* Floating Controls */}
       <div className="controls no-print">
         <button onClick={toggleTheme} className="icon-btn" aria-label="Toggle Theme">
@@ -148,11 +165,33 @@ function App() {
           <section className="fade-in section-block">
             <h2 className="section-title"><GraduationCap size={24} /> Education</h2>
             <div className="education-grid">
-              {resumeData.education.map((edu, index) => (
+              {resumeData.education.map((edu: any, index) => (
                 <div key={index} className="glass-card education-item">
                   <h4>{edu.degree}</h4>
                   <p className="school-name">{edu.school}</p>
                   <p className="period-text">{edu.period}</p>
+                  {(edu.sertificate || edu.acreditation) && (
+                    <div className="education-actions no-print">
+                      {edu.sertificate && (
+                        <button 
+                          className="action-btn" 
+                          onClick={() => setActiveCertificate(edu.sertificate)}
+                        >
+                          Sertificate
+                        </button>
+                      )}
+                      {edu.acreditation && (
+                        <a 
+                          href={edu.acreditation} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="action-btn link"
+                        >
+                          Acreditation
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

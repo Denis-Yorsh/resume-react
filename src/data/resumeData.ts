@@ -1,5 +1,5 @@
 export const resumeData = {
-  name: "Denis Yorsh",
+  name: "Denys Yorsh",
   role: "Full Stack Developer",
   photo: "/image_me.jpeg",
   contact: {
@@ -69,14 +69,23 @@ export const resumeData = {
   ],
   education: [
     {
+      school: "Corsera",
+      degree: "Google AI Professional Certificate x UVF",
+      period: "May 2026",
+      sertificate: "/public/google_ai_professional_certificate.png",
+      acreditation: "https://www.coursera.org/account/accomplishments/specialization/XJY3YQKSE4KT",
+    },
+    {
       school: "It Step Academy Ukraine",
-      degree: "Java, JavaScript",
+      degree: "Java, Java Script, Sprihg Boot, Databace",
       period: "November 2022 - October 2023",
+      sertificate: "/public/diploma_it_step.jpeg"
     },
     {
       school: "IT School Hillel",
       degree: "Java",
       period: "April 2022 - October 2022",
+      sertificate: "/public/hillel_sertificate.jpeg",
     },
     {
       school: "Kharkov National Economic University",
