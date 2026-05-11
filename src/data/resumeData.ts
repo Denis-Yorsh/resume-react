@@ -7,7 +7,7 @@ export const resumeData = {
     phone: "",
     location: "Ukraine",
     linkedin: "linkedin.com/in/denis-yorsh",
-    github: "github.com/denis-yorsh",
+    github: "github.com/denys-yorsh",
     signal: "signal.me/#eu/denys_yorsh.99"
   },
 
