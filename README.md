@@ -1,5 +1,10 @@
 # Full Stack Developer (React) - Resume
 
+## Author
+
+- **Denys Yorsh** — *Lead Developer*
+- **Gemini (Google AI)** — *AI Pair Programming & Architecture Assistant*
+
 ## Technologies used:
 
 - React
