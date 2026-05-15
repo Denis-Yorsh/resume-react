@@ -31,7 +31,8 @@ export const resumeData = {
       skills: [
         { name: "Java / Spring Boot", level: 85 },
         { name: "Node.js / Nest.js / Express.js", level: 80 },
-        { name: "C / C++ / C#", level: 75 },
+        { name: "C / C++ / Qt", level: 80 },
+        { name: "C# / WPF / Avalonia", level: 75 },
         { name: "Python / PHP", level: 75 },
         { name: "SQL / JPQL / NoSQL", level: 85 },
         { name: "REST API / Hibernate / JPA", level: 85 },
@@ -61,9 +62,21 @@ export const resumeData = {
   ],
   experience: [
     {
+      company: "Armed Forces of Ukraine (Military Unit A5006)",
+      role: "Digitalization & Transformation Specialist",
+      period: "03.2026 - Present time",
+      description: "Responsible for the implementation and deployment of digital solutions within military infrastructure. Modernizing internal workflows through software integration, automating administrative systems, and maintaining specialized digital platforms.",
+    },
+    {
+      company: "Armed Forces of Ukraine (Military Unit A5006)",
+      role: "Military Service / Combat Operations",
+      period: "09.2024 - 03.2026",
+      description: "Served in a high-pressure environment within a combat unit. Demonstrated strong resilience, team coordination, and problem-solving skills under challenging conditions. Successfully managed operational tasks and equipment maintenance while ensuring mission objectives.",
+    },
+    {
       company: "Freelance / Personal Projects",
       role: "Full Stack Developer",
-      period: "2022 - Present time",
+      period: "2022 - 09.2024",
       description: "Application development using a modern technology stack. Database management, REST API design, and responsive interface development.",
     }
   ],
